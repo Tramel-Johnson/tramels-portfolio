@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CRM project/css/style.css">
+    <link rel="stylesheet" href="/CRM project/css/left.css">
+    
+    <title>Softphone</title>
+</head>
+<body>
+   
+    <div class="container" style="border: none; ">
+        <div class="left-side">
+            <div id="main-page">
+                <h2 id="username">Welcome,  Agent </h2>
+                <br>
+                <hr>
+                <div class="flex" style="border: none; ">
+                    
+                    <button class="P-btn tooltip" ><span class="tooltiptext">This button has no action</span></button>
+                    <!-- push btn to chance color and active state w/ white font -->
+                    <button  onclick="agentStatus()" class="not-rdy" id="not-rdy">Not Ready </button>
+                    <button  onclick="agentStatus()" class="rdy" id="rdy">Ready</button>
+                    
+                </div>
+                
+                <div style="padding: 0; border: none;">
+                    <!-- New call btn is theme color w/ white font w/ calling sound 
+                        &/ random name  -->
+                    <button class="new-call" onclick="newPage()">New Call</button>
+                </div>
+                <div>
+                    <button class="no-border" onclick="newPage2()">Voicemail</button>
+                    <button class="no-border" onclick="newPage3()">Reminders</button>
+                    <button class="no-border no-bttm" onclick="newPage4()">Conversations</button>
+                </div>
+                <div>
+                    <button class="no-border" onclick="newPage5()">Add to DNC</button>
+                    <div class="flex" style="border: none; "> <!-- flex /// DID-->
+                        <button class="no-border tooltip"style="border-right: 1px solid rgb(143, 143, 143);" >Settings<span class="tooltiptext">This button has no action</span></button>
+                        <!-- instructions/ drop down  -->
+                        <button class="no-border tooltip" >Help<span class="tooltiptext">This button has no action</span></button>
+                    </div>
+                    <div style=" text-align: center;  color:rgb(109, 44, 175)">
+                        <h2> 0</h2>
+                        <p>Calls answered</p>
+                        <hr>
+                        <!-- <h2>0:00</h2> -->
+                        <h2><span id="base-timer">0:00</span> </h2>
+                        <p>AHT</p>
+                    </div>
+                    <!--  reset btn  and green check: softphone Connected  LOGO -->
+                    <br>
+                    <h6>Softphone Connected</h6>
+                </div>
+            </div>
+            <!-- pages content -->
+            <div id="newCall-pg" class="fullpage">
+                <h3>New Call</h3>
+                <hr>
+                <label for="num">Type Number</label>
+                <input type="tel" id="num" placeholder="Type name or number">
+                <button onclick="cancelBtn5()"class="cancel-btn"></a>Go Back</button>
+                <button class="dnc-btn" style="background-color: indigo; color: #ffffff;">Dial</button>
+
+            <button onclick="cancelBtn()"class="cancel-btn">Go Back</button>
+            </div>
+            <div id="voicemail-pg" class="fullpage">
+                <h4>Voicemail</h4>
+                <hr>
+                <p class="message" style="margin-top: 400px;">You have no voicemail messages</p>
+                <button onclick="cancelBtn2()"class="cancel-btn">Go Back</button>
+            </div>
+            <div id="reminders-pg" class="fullpage">
+                <h4>Reminders</h4>
+                <h6>Completed(0)</h6>
+                <hr>
+                <div class="centered">
+                <p class="message">You have no reminders</p>
+                <button class="pur-btn">New Reminder</button>
+                </div>
+                <button onclick="cancelBtn3()"class="cancel-btn">Go Back</button>
+            </div>
+            <div id="conversations-pg" class="fullpage">
+                <h4>Conversations</h4>
+                <hr>
+                <div class="centered">
+                    <p class="message">You have no conversations</p>
+                    <button class="pur-btn">New conversations</button>
+                </div>
+                <button onclick="cancelBtn4()"class="cancel-btn">Go Back</button>
+            </div>
+            <div id="dnc-pg" class="fullpage">
+                <h3>Add number to Do Not Call list</h3>
+                <hr>
+                <label for="tel">Phone Number</label>
+                <input type="tel" id="tel" placeholder="Type number...">
+                <h6 style="color: tomato;">* You cannot undo this action after you click Add to DNC</h6>
+                <button onclick="cancelBtn5()"class="cancel-btn"></a>Go Back</button>
+                <button class="dnc-btn">Add to DNC</button>
+            </div>
+        </div>
+        
+        <div class="right-side">
+            <h1>member info</h1>
+            <table>
+                <tbody>
+                    <tr>
+                        <td colspan="6" align="center"><b>Member Information&nbsp;</b>-<p style="color:red;display:inline-block;"></p></td>
+                    </tr>
+                    <tr>
+                        <td> Name</td><td class="td-info">JOHN DOE</td>
+                        <td> Member Plan </td><td class="td-info"> INSURANCE PLAN</td>
+                        <td> Group ID </td><td class="td-info"></td>
+                    </tr>
+                    <tr>
+                        <td> Member ID </td><td class="td-info">AB123456789</td>
+                        <td> DOB </td><td class="td-info">01/15/1988</td>
+                        <td> Phone </td><td class="td-info">123-345-7891</td>
+                    </tr>
+                        <tr><td> Address</td><td colspan="1" class="td-info" >
+                        123 ADAMS AVE  ,  STATE	</td>
+                    <td>Plan Type</td><td class="td-info">FULL COVERAGE GOLD PLAN</td>
+                    <td>Customer Service Number</td><td class="td-info">1-800-MEMBER</td>
+                    </tr>
+                
+                
+                <tr>
+                <td> Member Gender</td><td class="td-info"></td>
+                </tr>
+                <tr>
+                    <td>PCP Name</td><td class="td-info">DR. ADAM SMITH</td>
+                    <td>PCP Group</td><td class="td-info"></td>
+                    <td>PCP NPI</td><td class="td-info">56789101112</td>
+                </tr>
+                <tr>
+                    <td>PCP Address</td><td colspan="3" class="td-info" ></td>
+                    <td>PCP Phone</td><td colspan="2" class="td-info" ></td>
+                    
+                </tr>
+                <tr>
+                <td colspan="6" align="center" style="color:#000;background-color:#CCC;border-radius: 5px;">
+                <b>Member Incentives 444-555-1111 - <p style="color:red;display:inline">ONLY if member asks about incentives</p> </b>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+
+</body>
+
+<script src="/CRM project/script.js"></script>
+
+</html>

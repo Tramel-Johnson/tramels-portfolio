@@ -1,0 +1,161 @@
+/* Left side - main  */
+
+/* .tab-btn{ */
+    button, .cancel-btn{ /*temp*/
+        padding: .5em 0;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        cursor: pointer;
+    
+    }
+    .no-border:hover{
+    background-color: rgb(231, 231, 231);
+    }
+    
+    .no-border{
+        border: none;
+        border-bottom: 1px solid rgb(143, 143, 143);
+        background-color: white;
+        color:  rgb(109, 44, 175);;
+    }
+    .no-bttm{
+        border-bottom: none;
+        
+    }
+    .flex{
+        display: flex;
+       
+    }
+    .new-call{
+        border: none;
+        border-radius: 15px;
+        background-color: rgb(109, 44, 175);
+        color: white;
+    }
+    .new-call:hover{
+        background-color: rgb(74, 12, 137);
+    }
+    .rdy,#rdy{
+        background-color: rgb(88, 144, 4);
+        color: white;
+        border-radius:5px;
+        border: none;
+        display: none;
+    }
+    .rdy:hover, #rdy:hover{
+        background-color: rgb(73, 116, 7);
+    
+    }
+    .not-rdy, #not-rdy{
+        background-color: tomato;
+        color:white;
+        border-radius: 5px;
+        border: none;
+    }
+    .not-rdy:hover, #not-rdy:hover{
+        background-color: rgb(243, 66, 35);
+    }
+    .P-btn{
+        width: 60px; 
+        margin-right:.5rem;
+        background: url("/img/power-button.png") center/cover no-repeat;
+        border-radius: 5px;
+        border: none;
+    }
+    .P-btn:hover{
+        box-shadow: 0 5px 5px;
+        /* background-color: rgb(157, 157, 157); */
+    }
+    .fullpage{
+        height: 100vh;
+        text-align: center;
+
+    }
+    .message{
+        color: #a1a1a1;
+        align-items: center;
+        margin: 2rem;
+    }
+    .pur-btn{
+        background-color: blueviolet;
+        color: #ffffff;
+        border: none;
+        width: 200px;
+    }
+    .pur-btn:hover{
+        background-color: rgb(78, 0, 150);
+    }
+    .dnc-btn{
+        position:absolute;
+        bottom: 5.5%;
+        left: 2%;
+        width:400px;
+        background-color: #e5e5e5;
+        
+    }
+    .cancel-btn{
+        position:absolute;
+        bottom: 1%;
+        left: 2%;
+        width:23%;
+    }
+    .centered{
+        margin-top:400px;
+        border: none;
+    }
+    #base-timer{
+        color:rgb(109, 44, 175);
+        font: 1.5rem 500;
+    }
+    [id$="-pg"]{
+        display: none;
+
+    }
+    /* temp */
+    div{
+        padding: .2rem;
+        margin-bottom: 1rem;
+        border: 1px solid rgb(143, 143, 143);
+        border-radius: 15px;
+    }
+    /* Tooltip container */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+      }
+      
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: 150%;
+        left: 50%;
+        margin-left: -60px;
+        font-size: 10px;
+      }
+      
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+      }
+      
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+    
